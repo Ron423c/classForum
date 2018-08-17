@@ -57,12 +57,15 @@ h3{
     color: white;
     background-color: chartreuse;
     margin-bottom: 1%;
+    transition-duration: 1s;
 }
 
 #signUpBtn:hover{
     color: red;
     background-color: cyan;
     /*pointer*/
+    cursor: pointer;
+    border-radius: 0%;
 }
 
 #logInBtn{
