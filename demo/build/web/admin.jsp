@@ -10,6 +10,11 @@
     Author     : khan
 --%>
 
+<% 
+    if(session.getAttribute("uEmail") != null){
+        String userEmail = session.getAttribute("uEmail").toString();
+%> 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %>
 <%!
@@ -75,3 +80,7 @@ try{
 %>
     </body>
 </html>
+<%
+}else
+    response.sendRedirect("login.jsp");
+%>

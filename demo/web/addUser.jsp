@@ -28,6 +28,8 @@ try{
     Statement st = conn.createStatement();
     st.executeUpdate(sql);
     conn.close();
+    session = request.getSession();
+    session.setAttribute("uEmail", email);
     response.sendRedirect("classPosts.jsp");
 }catch(Exception ex){
     //out.println(ex);

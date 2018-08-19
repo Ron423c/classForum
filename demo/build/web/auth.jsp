@@ -28,6 +28,8 @@ try{
     String sql = "SELECT * from users WHERE email = '"+user+"' AND password='"+pass+"'";
     rs = st.executeQuery(sql);
     if(rs.next()){
+        session = request.getSession();
+        session.setAttribute("uEmail", user);
 //        out.println(rs.getString(5));
 //            int i = 1;
 //            while(i<9){

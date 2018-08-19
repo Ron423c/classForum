@@ -3,7 +3,10 @@
     Created on : Aug 17, 2018, 7:24:56 AM
     Author     : khan
 --%>
-
+<% 
+    if(session.getAttribute("uEmail") != null){
+        String userEmail = session.getAttribute("uEmail").toString();
+%> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,7 +14,7 @@
         <!-- Make site responsive on mobile/tablet -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Classes Unofficially</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
         <!--<link rel="stylesheet" href="/stylesheets/main.css">-->
     </head>
     <body>
@@ -36,8 +39,8 @@
                           <li><a href="forum.jsp">Forum</a></li>
                           <li><a href="classPosts.jsp">Class Posts</a></li>
                       
-                          <li><a href="#">Signed In As(profile)</a></li>
-                          <li><a href="#">Logout</a></li>
+                          <li><a href="profile.jsp">Signed In As(profile)</a></li>
+                          <li><a href="logout.jsp">Logout</a></li>
                      
                   </ul>
                 </div>

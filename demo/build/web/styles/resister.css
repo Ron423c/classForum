@@ -195,3 +195,16 @@ input:-moz-placeholder {
         from(#a4b0cb),
         to(#b9c5dd));
 }
+
+#my_file {
+    display: none;
+}
+
+#profilePic {
+    background: #f9f9f9;
+    border: 5px solid #88c;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}

@@ -57,7 +57,7 @@ h3{
     color: white;
     background-color: chartreuse;
     margin-bottom: 1%;
-    transition-duration: 1s;
+    transition-duration: .3s;
 }
 
 #signUpBtn:hover{

@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/khan/Downloads/classForum-master/demo/web/partials/header.jsp</file>
-            <file>file:/home/khan/Downloads/classForum-master/demo/web/forum.jsp</file>
-            <file>file:/home/khan/Downloads/classForum-master/demo/web/classPosts.jsp</file>
-            <file>file:/home/khan/Downloads/classForum-master/demo/web/styles/classPosts.css</file>
-            <file>file:/home/khan/Downloads/classForum-master/demo/web/partials/footer.jsp</file>
+            <file>file:/home/khan/Downloads/classForum-master/demo/web/styles/resister.css</file>
+            <file>file:/home/khan/Downloads/classForum-master/demo/web/js/resister.js</file>
+            <file>file:/home/khan/Downloads/classForum-master/demo/web/resister.jsp</file>
         </group>
     </open-files>
 </project-private>

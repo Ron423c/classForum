@@ -23,7 +23,7 @@
             </div>
         <%}%>
         
-        <div style="width: 45%; margin: 25px auto;">
+        <div style="width: 50%; margin: 25px auto;">
             
                 <form  id="signup" action="addUser.jsp" method="POST">
                     
@@ -47,7 +47,8 @@
                                       <input type="email" name="email" placeholder="e-mail" autofocus required />
 
                                       <input type="password" name="password" placeholder="Password" required />
-
+                                      <input type="button" id="profilePic" value="Profile Pic">
+                                      <input type="file" id="my_file">
                                         <div class="checkboxy">
                                             <input name="cecky" id="checky" value="1" type="checkbox" required /><label class="terms">I accept the terms of use</label>
                                         </div>
@@ -56,7 +57,8 @@
                                 </div>
 ​
                             </td>
-                            <td style="margin-top: 50%;">
+                            <td style="margin-top: 30%;">
+               
                                 <select name="TorS" id="TorSid" required>
                                     <option value="">T or S</option>
                                     <option value="teacher">Teacher</option>
@@ -95,6 +97,7 @@
                                 <!--<input type="file">-->
                             </td>
                         </tr>
+                        
                     </table>
                     <button>Sign Up</button>
                 </form>

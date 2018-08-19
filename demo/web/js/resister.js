@@ -16,3 +16,7 @@ document.getElementById("TorSid").addEventListener("change", function(){
         sec.disabled = false;
     }
 });
+
+document.getElementById('profilePic').onclick = function() {
+    document.getElementById('my_file').click();
+};
