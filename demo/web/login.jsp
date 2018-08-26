@@ -4,6 +4,10 @@
     Author     : root
 --%>
 
+<% 
+    if(session.getAttribute("uEmail") == null){
+        //String userEmail = session.getAttribute("uEmail").toString();
+%> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -27,3 +31,7 @@
         </div>
     </body>
 </html>
+<%
+}else
+    response.sendRedirect("classPosts.jsp");
+%>

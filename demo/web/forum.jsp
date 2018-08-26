@@ -8,5 +8,5 @@
 <%@ include file="partials/header.jsp" %> 
 
         <h1>Forum</h1>
-
+        <a href="askQForm.jsp"><button>Ask a question</button></a>
 <%@ include file="partials/footer.jsp" %>  

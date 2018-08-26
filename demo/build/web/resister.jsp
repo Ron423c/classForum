@@ -5,7 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
- 
+ <% 
+    if(session.getAttribute("uEmail") == null){
+        //String userEmail = session.getAttribute("uEmail").toString();
+%> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -107,3 +110,7 @@
         <script type="text/javascript" src="js/resister.js"></script>
     </body>
 </html>
+<%
+}else
+    response.sendRedirect("classPosts.jsp");
+%>

@@ -39,7 +39,7 @@
                           <li><a href="forum.jsp">Forum</a></li>
                           <li><a href="classPosts.jsp">Class Posts</a></li>
                       
-                          <li><a href="profile.jsp">Signed In As(profile)</a></li>
+                          <li><a href="profile.jsp">Profile(<%=userEmail%>)</a></li>
                           <li><a href="logout.jsp">Logout</a></li>
                      
                   </ul>
