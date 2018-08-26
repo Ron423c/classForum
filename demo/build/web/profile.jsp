@@ -4,23 +4,8 @@
     Author     : khan
 --%>
 
-<% 
-    if(session.getAttribute("uEmail") != null){
-        String userEmail = session.getAttribute("uEmail").toString();
-%> 
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Profile</title>
-    </head>
-    <body>
+<%@ include file="partials/header.jsp" %> 
+
         <h1>Profile page</h1>
-    </body>
-</html>
-<%
-}else
-    response.sendRedirect("login.jsp");
-%>
+<%@ include file="partials/footer.jsp" %> 

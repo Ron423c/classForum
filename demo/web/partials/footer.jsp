@@ -14,6 +14,7 @@
 
 <!-- Bootstrap JS CDN -->
 <script src="bootstrap/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
     </body>
 </html>
 <%

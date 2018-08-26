@@ -15,7 +15,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Classes Unofficially</title>
         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-        <!--<link rel="stylesheet" href="/stylesheets/main.css">-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
         <nav class="navbar navbar-default">
@@ -32,14 +33,14 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
+                      <li id="routine"><a href="#">Routine</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
       
-                          <li><a href="forum.jsp">Forum</a></li>
-                          <li><a href="classPosts.jsp">Class Posts</a></li>
+                          <li id="forum"><a href="forum.jsp">Forum</a></li>
+                          <li id="classPosts" class="active"><a href="classPosts.jsp">Class Posts</a></li>
                       
-                          <li><a href="profile.jsp">Profile(<%=userEmail%>)</a></li>
+                          <li id="profile"><a href="profile.jsp">Profile(<%=userEmail%>)</a></li>
                           <li><a href="logout.jsp">Logout</a></li>
                      
                   </ul>
