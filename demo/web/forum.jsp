@@ -6,7 +6,14 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ include file="partials/header.jsp" %> 
-
-        <h1>Forum</h1>
-        <a href="askQForm.jsp"><button>Ask a question</button></a>
+    <header class="jumbotron">
+         <div class="container">
+             <h1>Welcome To Forum!</h1>
+             <p>Quench your curiosity</p>
+             <p>
+                <a class="btn btn-success btn-large" href="askQForm.jsp">Ask a question</a>
+             </p>
+         </div>
+     </header>
+        
 <%@ include file="partials/footer.jsp" %>  

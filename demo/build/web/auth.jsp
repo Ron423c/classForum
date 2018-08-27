@@ -18,8 +18,11 @@ String user, pass;
 user = request.getParameter("email");
 pass = request.getParameter("password");
 
-if(user.equals("admin") && pass.equals("admin"))
+if(user.equals("admin") && pass.equals("admin")){
+    session = request.getSession();
+    session.setAttribute("uEmail", user);
     response.sendRedirect("admin.jsp");
+}
 
 try{
     Class.forName("com.mysql.jdbc.Driver");
