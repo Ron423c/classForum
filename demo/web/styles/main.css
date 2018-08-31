@@ -7,4 +7,21 @@ and open the template in the editor.
     Created on : Aug 26, 2018, 3:42:26 PM
     Author     : khan
 */
+.shadow{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 
+#home{
+    border-radius: 50%;
+}
+
+#thePost{ 
+    margin: 0 auto;
+}
+
+.flex {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100px; width: 100px;
+      /*overflow: hidden;*/
+    }

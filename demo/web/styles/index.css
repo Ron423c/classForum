@@ -47,25 +47,25 @@ h3{
     margin-bottom: 0px;
 }
 
-#signUpBtn{
-    border-radius: 15%;
-    /*border: none;*/
-    padding: .5%;
-    width: 10%;
-    font-weight: 800;
-    font-size: 120%;
+#signUpBtn {
+    border-radius: 5px;
     color: white;
-    background-color: chartreuse;
-    margin-bottom: 1%;
-    transition-duration: .3s;
-}
+    background-color: #0F5897;
+    padding: 5px 20px 5px 20px;
+    margin: 1%;
+  }
 
-#signUpBtn:hover{
-    color: red;
-    background-color: cyan;
-    /*pointer*/
-    cursor: pointer;
-    border-radius: 0%;
+#signUpBtn:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /* add your code below this line */
+    animation-fill-mode: forwards;
+    /* add your code above this line */
+  }
+@keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
 }
 
 #logInBtn{

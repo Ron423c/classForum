@@ -32,7 +32,7 @@
                     <i class="fas fa-file-pdf fa-2x" name="file"></i>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    <button class="btn btn-lg btn-primary btn-block shadow">Submit!</button>
                 </div>
             </form>
              <a href="forum.jsp">Go back</a>

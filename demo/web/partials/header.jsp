@@ -29,19 +29,19 @@
                       <span class="icon-bar"></span>
                     </button>
         
-                    <a class="navbar-brand" href="#">$$$</a>
+                    <a class="navbar-brand shadow" id="home" href="classPosts.jsp"><i class="fas fa-home"></i></a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav">
-                      <li id="routine"><a href="#">Routine</a></li>
+                      <li id="routine"><a href="routine.jsp">Routine <i class="fas fa-list-ul"></i></a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
       
                           <li id="forum"><a href="forum.jsp">Forum</a></li>
                           <li id="classPosts" class="active"><a href="classPosts.jsp">Class Posts</a></li>
                       
-                          <li id="profile"><a href="profile.jsp">Profile(<%=userEmail%>)</a></li>
-                          <li><a href="logout.jsp">Logout</a></li>
+                          <li id="profile"><a href="profile.jsp">Profile <i class="fas fa-user"></i></a></li>
+                          <li><a href="logout.jsp">Logout <i class="fas fa-sign-out-alt"></i></a></li>
                      
                   </ul>
                 </div>

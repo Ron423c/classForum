@@ -10,18 +10,19 @@
     Connection conn = null;
     Statement st = null;
     ResultSet rs = null;
+    int pics = 0, files = 0;
 %>
 
 <%@ include file="partials/header.jsp" %> 
 
     <link rel="stylesheet" href="styles/classPosts.css"/>
    
-    <header class="jumbotron">
+    <header class="jumbotron shadow">
          <div class="container">
              <h1>Welcome To Classes Unofficially!</h1>
              <p>Learn & Help | Just for Fun</p>
              <p>
-                <a class="btn btn-success btn-large" href="classPostForm.jsp">Add New Class Post</a>
+                <a class="btn btn-info btn-large shadow" href="classPostForm.jsp">Add New Class Post</a>
              </p>
          </div>
      </header>
@@ -31,30 +32,47 @@
 
 String user, pass;
 
-user = request.getParameter("email");
-pass = request.getParameter("password");
+user = session.getAttribute("uEmail").toString();
+//pass = request.getParameter("password");
 
 try{
     Class.forName("com.mysql.jdbc.Driver");
     conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/users","root", "nothing");
     st = conn.createStatement();
-    String sql = "SELECT subject, topic, description, email from classPosts";
+    String sql = "SELECT * from classPosts";
     rs = st.executeQuery(sql);
     while(rs.next()){ %>
             <div class="col-md-4 col-sm-6">
-                <div class="thumbnail">
+                <div class="thumbnail shadow">
                    <!--<img src="">-->
-                   <div class="caption">
-                       <h3><%=rs.getString(1)%></h3>
-                   </div>
-                   <div class="caption">
+                   <div>
                        <h4><%=rs.getString(2)%></h4>
                    </div>
+                   <div>
+                       <h3><%=rs.getString(3)%></h3>
+                   </div>
                    <p>
-                       <%=rs.getString(3)%>
+                       <%=rs.getString(4).substring(0,100)%>.....
+                   </p>
+                   <div>
+                       <%
+                           for(int i = 6; i<11; i++)
+                               if(rs.getString(i) != null)
+                                   pics++;
+                           for(int i = 11; i<13; i++)
+                               if(rs.getString(i) != null)
+                                   files++;
+                       %>
+                       <p><%=pics%> pics | <%=files%> files</p>
+                   </div>
+                   <p>
+                       <a href="showClassPost.jsp" class="btn btn-success btn-sm shadow">More info</a>
                    </p>
                    <p>
-                       <a href="showClassPost.jsp" class="btn btn-primary">More info</a>
+                   <%if(rs.getString(5).equals(user)){%>
+                        <a href="#" id="deleteBtn" class="btn btn-danger btn-sm shadow">Delete</a>
+                        <a href="#" id="updateBtn" class="btn btn-info btn-sm shadow">Update</a>
+                   <%}%>
                    </p>
                 </div>
             </div> 

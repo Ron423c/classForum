@@ -25,6 +25,11 @@
                 </div>
                 <div class="form-group">
                     <p>Add pics</p>
+                    <img id="image1">
+                    <img id="image2">
+                    <img id="image3">
+                    <img id="image4">
+                    <img id="image5">
                     <i class="far fa-image fa-2x" name="pic"></i>
                 </div>
                 <div class="form-group">
@@ -32,7 +37,7 @@
                     <i class="fas fa-file-pdf fa-2x" name="file"></i>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    <button class="btn btn-lg btn-primary btn-block shadow">Submit!</button>
                 </div>
             </form>
              <a href="classPosts.jsp">Go back</a>

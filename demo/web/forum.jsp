@@ -6,12 +6,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ include file="partials/header.jsp" %> 
-    <header class="jumbotron">
+    <header class="jumbotron shadow">
          <div class="container">
              <h1>Welcome To Forum!</h1>
              <p>Quench your curiosity</p>
              <p>
-                <a class="btn btn-success btn-large" href="askQForm.jsp">Ask a question</a>
+                <a class="btn btn-success btn-large shadow" href="askQForm.jsp">Ask a question</a>
              </p>
          </div>
      </header>

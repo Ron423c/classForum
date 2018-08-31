@@ -14,7 +14,6 @@ email = session.getAttribute("uEmail").toString();
 desc = request.getParameter("description");
 
 sql = "INSERT INTO classPosts (subject, topic, email, description) "+"VALUES('"+subject+"','"+topic+"','"+email+"','"+desc+"')";
-
 try{
     Class.forName("com.mysql.jdbc.Driver");
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/users","root", "nothing");
