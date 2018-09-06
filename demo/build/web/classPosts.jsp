@@ -19,7 +19,7 @@
    
     <header class="jumbotron shadow">
          <div class="container">
-             <h1>Welcome To Classes Unofficially!</h1>
+             <h1><i class="fas fa-user-graduate"></i> Welcome To Classes Unofficially!</h1>
              <p>Learn & Help | Just for Fun</p>
              <p>
                 <a class="btn btn-info btn-large shadow" href="classPostForm.jsp">Add New Class Post</a>
@@ -55,7 +55,7 @@ try{
                        <%=rs.getString(4).substring(0,100)%>.....
                    </p>
                    <div>
-                       <%
+                       <% pics = 0; files = 0;
                            for(int i = 6; i<11; i++)
                                if(rs.getString(i) != null)
                                    pics++;
@@ -66,12 +66,12 @@ try{
                        <p><%=pics%> pics | <%=files%> files</p>
                    </div>
                    <p>
-                       <a href="showClassPost.jsp" class="btn btn-success btn-sm shadow">More info</a>
+                       <a href="showClassPost.jsp?id=<%=rs.getString(1)%>" class="btn btn-success btn-sm shadow">More info</a>
                    </p>
                    <p>
-                   <%if(rs.getString(5).equals(user)){%>
+                   <%if(rs.getString(5).equals(user) || rs.getString(5).equals("admin")){%>
                         <a href="#" id="deleteBtn" class="btn btn-danger btn-sm shadow">Delete</a>
-                        <a href="#" id="updateBtn" class="btn btn-info btn-sm shadow">Update</a>
+                        <a href="updatePostForm.jsp?id=<%=rs.getString(1)%>" id="updateBtn" class="btn btn-info btn-sm shadow">Update</a>
                    <%}%>
                    </p>
                 </div>

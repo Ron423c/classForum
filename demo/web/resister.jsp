@@ -50,8 +50,9 @@
                                       <input type="email" name="email" placeholder="e-mail" autofocus required />
 
                                       <input type="password" name="password" placeholder="Password" required />
-                                      <input type="button" id="profilePic" value="Profile Pic">
-                                      <input type="file" id="my_file">
+<!--                                      <input type="button" id="profilePic" value="Profile Pic">
+                                      <input type="file" id="my_file" accept=".png, .jpg, .jpeg" required>-->
+                                      <input type="text" name="profilePic" placeholder="pic url" required/>
                                         <div class="checkboxy">
                                             <input name="cecky" id="checky" value="1" type="checkbox" required /><label class="terms">I accept the terms of use</label>
                                         </div>

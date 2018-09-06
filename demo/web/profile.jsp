@@ -27,13 +27,13 @@ try{
     Class.forName("com.mysql.jdbc.Driver");
     conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/users","root", "nothing");
     st = conn.createStatement();
-    String sql = "SELECT fname,lname,email from users where email='"+user+"'";
+    String sql = "SELECT fname,lname,email,profilePic from users where email='"+user+"'";
     rs = st.executeQuery(sql);
     rs.next();
     %>
             <div class="col-md-4 col-sm-6">
                 <div class="thumbnail text-center shadow" id="userInfo">
-                    <img src="styles/assets/background.jpg">
+                    <img src="<%=rs.getString(4)%>">
                    
                    <div class="caption">
                        <h3 style="text-transform: uppercase;"><%=rs.getString(1)%> <%=rs.getString(2)%></h3>
@@ -52,12 +52,12 @@ try{
                        <h2>Posts</h2>
                        <ul>
                        <%
-                            sql = "SELECT topic from classPosts where email='"+user+"'";
+                            sql = "SELECT topic, id from classPosts where email='"+user+"'";
                             rs = st.executeQuery(sql);
                             while(rs.next()){
                        %>
                        
-                       <a href="showClassPost.jsp"><li><%=rs.getString(1)%></li></a>
+                       <a href="showClassPost.jsp?id=<%=rs.getString(2)%>"><li><%=rs.getString(1)%></li></a>
                        
                        <%}%>
                        </ul>

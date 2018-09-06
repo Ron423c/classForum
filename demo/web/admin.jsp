@@ -57,7 +57,7 @@ try{
             while(i<4){
                 if(i==3){
 %>                
-            <td><a href="showSomeone.jsp?name=<%=rs.getString(i)%>"><%out.println(rs.getString(i));%></a></td>
+            <td><a href="profile.jsp?name=<%=rs.getString(i)%>"><%out.println(rs.getString(i));%></a></td>
                 
 <%               }else { %>
                         <td><%out.println(rs.getString(i));%></td>

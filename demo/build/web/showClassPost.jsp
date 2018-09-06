@@ -19,51 +19,85 @@
     <div class="text-center" style="display:flex; flex-wrap: wrap;">
         <%
 int pics = 0, files = 0;
-String user, pass;
+String user, id;
 
 user = session.getAttribute("uEmail").toString();
-pass = request.getParameter("password");
+id = request.getParameter("id");
+//out.println(id);
 
 try{
     Class.forName("com.mysql.jdbc.Driver");
     conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/users","root", "nothing");
     st = conn.createStatement();
-    String sql = "SELECT * from classPosts";
+    String sql = "SELECT * from classPosts where id='"+id+"'";
     rs = st.executeQuery(sql);
+   
     if(rs.next()){ %>
         <div class="thumbnail shadow" id="thePost">
            <!--<img src="">-->
            <div>
-               <h4><%=rs.getString(2)%></h4>
+               <h4><u><%=rs.getString(2)%></u></h4>
            </div>
            <div class="caption">
-               <h2><%=rs.getString(3)%></h2>
+               <h2><u><%=rs.getString(3)%></u></h2>
            </div>
-           <p>
+           <p id="desc">
                <%=rs.getString(4)%>
            </p>
-            <div>
+           <hr>
+           
+           <div class="row">
+               <label>Files:</label>
+                <%for(int i = 11; i<13; i++)
+                  if(rs.getString(i) != null) {%>
+                  <div>
+                      <a href="#"><%=rs.getString(i)%></a>
+                  </div>
+                <% } else {out.print("no files"); break;} %>
+            </div>
+            <hr>
+            <div class="row">
+                <div>
+                <label>Pics:</label>
+                </div>
                <%
-                   for(int i = 6; i<11; i++)
-                       if(rs.getString(i) != null){%>
-                       <div class="col-md-3 col-sm-6 flex thumbnail shadow">
-                       <img src="<%=rs.getString(i)%>">
-                       </div>
-                 <% } 
-                    for(int i = 11; i<13; i++)
-                       if(rs.getString(i) != null)
-                           files++;
-               %>
+                for(int i = 6; i<11; i++)
+                    if(rs.getString(i) != null && !rs.getString(i).equals("null")){ %>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail shadow">
+                            <a href="<%=rs.getString(i)%>"><div class="">
+                                <img class="image" src="<%=rs.getString(i)%>">
+                                </div></a>
+                        </div>
+                    </div>
+                 <% }// else {out.print("no pics"); break;} 
+                 %> 
            </div>
+           <hr>
+           <p>
+               <em>Submitted By <strong>
+               <% String tempMail = rs.getString(5);
+               if(tempMail.equals(user)){
+                   out.print("You");
+               }else{
+               sql = "SELECT fname from users where email='"+tempMail+"'";
+                      rs = st.executeQuery(sql);
+                      rs.next();
+                      out.print(rs.getString(1));
+               }
+               %>
+               </strong> </em>
+            </p>
            <div class="btns">
-           <%if(rs.getString(5).equals(user)){%>
+               <%if(tempMail.equals(user)){%>
                 <a href="#" id="deleteBtn" class="btn btn-danger btn-sm shadow">Delete</a>
-                <a href="#" id="updateBtn" class="btn btn-info btn-sm shadow">Update</a>
+                <a href="updatePostForm.jsp?id=<%=id%>" id="updateBtn" class="btn btn-info btn-sm shadow">Update</a>
            <%}%>
            </div>
         </div>
-       <% }
-    
+       <% } else{
+                response.sendRedirect("classPosts.jsp");
+            }
     //out.println("  ===  "+pass);
     conn.close();
 }catch(Exception ex){

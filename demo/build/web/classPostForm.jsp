@@ -25,12 +25,22 @@
                 </div>
                 <div class="form-group">
                     <p>Add pics</p>
-                    <img id="image1">
-                    <img id="image2">
-                    <img id="image3">
-                    <img id="image4">
-                    <img id="image5">
-                    <i class="far fa-image fa-2x" name="pic"></i>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="pic1" placeholder="url">    
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="pic2" placeholder="url">    
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="pic3" placeholder="url">    
+                    </div>
+<!--                    <div class="form-group">
+                        <input class="form-control" type="text" name="subject" placeholder="Subject">    
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="subject" placeholder="Subject">    
+                    </div>-->
+                    <!--<i class="far fa-image fa-2x" name="pic"></i>-->
                 </div>
                 <div class="form-group">
                     <p>Add files</p>

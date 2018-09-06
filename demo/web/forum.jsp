@@ -8,7 +8,7 @@
 <%@ include file="partials/header.jsp" %> 
     <header class="jumbotron shadow">
          <div class="container">
-             <h1>Welcome To Forum!</h1>
+             <h1><i class="fas fa-pencil-alt"></i> Welcome To Forum!</h1>
              <p>Quench your curiosity</p>
              <p>
                 <a class="btn btn-success btn-large shadow" href="askQForm.jsp">Ask a question</a>

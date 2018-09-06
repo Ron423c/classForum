@@ -1,6 +1,6 @@
 <%-- 
-    Document   : addClassPost
-    Created on : Aug 26, 2018, 4:23:00 PM
+    Document   : updateClassPost
+    Created on : Sep 3, 2018, 10:47:39 PM
     Author     : khan
 --%>
 
@@ -16,8 +16,11 @@ pic1 = request.getParameter("pic1");
 pic3 = request.getParameter("pic3");
 pic2 = request.getParameter("pic2");
 
+int id = Integer.parseInt(request.getParameter("id"));
 
-sql = "INSERT INTO classPosts (subject, topic, email, description, pic1, pic2, pic3) "+"VALUES('"+subject+"','"+topic+"','"+email+"','"+desc+"','"+pic1+"','"+pic2+"','"+pic3+"')";
+//sql = "UPDATE classPosts (subject, topic, email, description) "+"VALUES('"+subject+"','"+topic+"','"+email+"','"+desc+"')";
+sql = "UPDATE classPosts SET subject='"+subject+"', topic='"+topic+"', description='"+desc+"', pic1='"+pic1+"', pic2='"+pic2+"', pic3='"+pic3+"' WHERE id="+id+";";
+
 try{
     Class.forName("com.mysql.jdbc.Driver");
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/users","root", "nothing");

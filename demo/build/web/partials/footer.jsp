@@ -15,6 +15,7 @@
 <!-- Bootstrap JS CDN -->
 <script src="bootstrap/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     </body>
 </html>
 <%
