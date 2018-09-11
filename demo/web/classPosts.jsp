@@ -52,7 +52,11 @@ try{
                        <h3><%=rs.getString(3)%></h3>
                    </div>
                    <p>
-                       <%=rs.getString(4).substring(0,100)%>.....
+                       <%
+                           if(rs.getString(4).length()<100)
+                               out.print(rs.getString(4));
+                           else   out.print(rs.getString(4).substring(0,100));
+                       %>.....
                    </p>
                    <div>
                        <% pics = 0; files = 0;
