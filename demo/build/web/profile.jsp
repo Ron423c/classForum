@@ -43,7 +43,7 @@ try{
                        <%=rs.getString(3)%>
                    </p>
                    <p>
-                       <a href="#" class="btn btn-primary shadow">Edit Profile</a>
+                       <a href="updateUserForm.jsp" class="btn btn-primary shadow">Edit Profile</a>
                        <a onclick="showQ()" class="btn btn-danger shadow">Delete Account</a>
                    </p>
                    <div id="theQ" style="display: none;">
@@ -51,7 +51,7 @@ try{
                        <p>Do you really want to delete?</p>
                        <p>
                             <a href="deleteUser.jsp" class="btn btn-sm btn-success shadow">Yes</a>
-                            <a href="profile.jsp" class="btn btn-sm btn-warning shadow">No</a>
+                            <a onclick="hideQ()" class="btn btn-sm btn-warning shadow">No</a>
                        </p>
                    </div>
                 </div>
@@ -96,5 +96,8 @@ try{
 <script>
     function showQ(){
         document.getElementById("theQ").style.display = "block";
+    }
+    function hideQ(){
+        document.getElementById("theQ").style.display = "none";
     }
 </script>

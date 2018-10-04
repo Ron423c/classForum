@@ -90,16 +90,16 @@ try{
             </p>
            <div class="btns">
                <%if(tempMail.equals(user)){%>
-                <a onclick="showQ()" id="deleteBtn" class="btn btn-danger btn-sm shadow">Delete</a>
-                <a href="updatePostForm.jsp?id=<%=id%>" id="updateBtn" class="btn btn-info btn-sm shadow">Update</a>
-                <div id="theQ" style="display: none;">
+               <div id="theQ" style="display: none; margin: 0">
                        <hr>
                        <p>Do you really want to delete?</p>
                        <p>
                             <a href="deletePost.jsp" class="btn btn-sm btn-success shadow">Yes</a>
                             <a href="showClassPost.jsp?id=<%=id%>" class="btn btn-sm btn-warning shadow">No</a>
                        </p>
-                </div>
+               </div>
+                <a onclick="showQ()" id="deleteBtn" class="btn btn-danger btn-sm shadow">Delete</a>
+                <a href="updatePostForm.jsp?id=<%=id%>" id="updateBtn" class="btn btn-info btn-sm shadow">Update</a>
            <%}%>
            </div>
         </div>
