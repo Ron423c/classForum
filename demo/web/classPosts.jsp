@@ -74,7 +74,6 @@ try{
                    </p>
                    <p>
                    <%if(rs.getString(5).equals(user) || rs.getString(5).equals("admin")){%>
-                        <a href="#" id="deleteBtn" class="btn btn-danger btn-sm shadow">Delete</a>
                         <a href="updatePostForm.jsp?id=<%=rs.getString(1)%>" id="updateBtn" class="btn btn-info btn-sm shadow">Update</a>
                    <%}%>
                    </p>

@@ -50,8 +50,13 @@
                     <button class="btn btn-lg btn-primary btn-block shadow">Submit!</button>
                 </div>
             </form>
-             <a href="classPosts.jsp">Go back</a>
+             <a onclick="goBack()">Go back</a>
         </div>
     </div>
 
 <%@ include file="partials/footer.jsp" %> 
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>

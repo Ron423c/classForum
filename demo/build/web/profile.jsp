@@ -27,7 +27,7 @@ try{
     Class.forName("com.mysql.jdbc.Driver");
     conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/users","root", "nothing");
     st = conn.createStatement();
-    String sql = "SELECT fname,lname,email,profilePic from users where email='"+user+"'";
+    String sql = "SELECT fname,lname,email,profilePic, dept, sem, sec from users where email='"+user+"'";
     rs = st.executeQuery(sql);
     rs.next();
     %>
@@ -37,14 +37,23 @@ try{
                    
                    <div class="caption">
                        <h3 style="text-transform: uppercase;"><%=rs.getString(1)%> <%=rs.getString(2)%></h3>
-                   
+                       <h5>Dept <%=rs.getString(5)%> | Sem <%=rs.getString(6)%> | Sec <%=rs.getString(7)%></h5>
                    </div>
                    <p>
                        <%=rs.getString(3)%>
                    </p>
                    <p>
                        <a href="#" class="btn btn-primary shadow">Edit Profile</a>
+                       <a onclick="showQ()" class="btn btn-danger shadow">Delete Account</a>
                    </p>
+                   <div id="theQ" style="display: none;">
+                       <hr>
+                       <p>Do you really want to delete?</p>
+                       <p>
+                            <a href="deleteUser.jsp" class="btn btn-sm btn-success shadow">Yes</a>
+                            <a href="profile.jsp" class="btn btn-sm btn-warning shadow">No</a>
+                       </p>
+                   </div>
                 </div>
             </div> 
             <div class="col-md-4 col-sm-6">
@@ -84,3 +93,8 @@ try{
 </div>
         
 <%@ include file="partials/footer.jsp" %> 
+<script>
+    function showQ(){
+        document.getElementById("theQ").style.display = "block";
+    }
+</script>
